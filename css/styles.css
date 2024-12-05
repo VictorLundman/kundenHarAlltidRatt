@@ -2,12 +2,17 @@
 
 html {
     --primary: #FFC107;
+    --radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 body {
     padding: 1rem;
     margin: 0;
     font-family: sans-serif;
+    font-size: large;
+    max-width: 60rem;
 }
 
 header {
@@ -15,8 +20,11 @@ header {
 }
 
 header .top {
+    top: 1rem;
     position: fixed;
-    width: calc(100vw - 2 * 1rem);
+    width: calc(100vw - 4 * 1rem);
+    max-width: calc(60rem - 2 * 1rem);
+    margin: 0 1rem;
     box-sizing: border-box;
     height: 3rem;
     display: flex;
@@ -24,7 +32,7 @@ header .top {
     align-items: center;
     padding: 1rem 1rem;
     background-color: white;
-    border-radius: 2px;
+    border-radius: var(--radius);
 }
 
 header .top .logo a {
@@ -44,7 +52,8 @@ header .top nav a:hover {
 
 @media only screen and (max-width: 600px) {
     header .top .search {
-        display: none;
+        display: none !important;
+        /* visibility: hidden; */
     }
 }
 
@@ -81,5 +90,73 @@ header .top .search button:hover {
 }
 
 header .hero {
-    padding-top: 3rem;
+    margin-top: 4rem;
+    background-image: url(/img/hero-cat-small.webp);
+    background-size: cover;
+    height: 10rem;
+    border-radius: var(--radius);
+    padding: 1rem;
+    color: white;
+}
+
+header .hero h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+header .hero p {
+    max-width: 15rem;
+}
+
+@media only screen and (min-width: 600px) {
+    header .hero {
+        background-image: url(/img/hero-cat-large.webp);
+        height: 20rem;
+        padding: 5rem;
+    }
+}
+
+h2 {
+    font-size: xx-large;
+}
+
+footer {
+    border-radius: var(--radius);
+    display: grid;
+    gap: 4rem;
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+    grid-template-columns: 7rem 20rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+}
+
+footer ul li+li {
+    margin-top: 0.2rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.1s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: var(--primary);
+}
+
+footer .logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+footer .navs {
+    display: flex;
+    justify-content: space-between;
 }
