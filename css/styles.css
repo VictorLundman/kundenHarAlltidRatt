@@ -15,7 +15,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     font-size: large;
-    max-width: 60rem;
+    max-width: calc(min(60rem, 100vw) - 2rem);
 }
 
 header {
@@ -178,3 +178,68 @@ footer .navs h3 {
     font-size: large;
     margin-top: 0;
 }
+
+.carusel {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    flex-wrap: nowrap;
+    overflow: visible;
+    justify-content: space-between;
+}
+
+.carusel a {
+    width: 100%;
+}
+
+.carusel .card {
+    height: min-content;
+    background-color: white;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    overflow: hidden;
+    gap: 0;
+    transition: 0.1s ease-in-out;
+}
+
+.carusel .card:hover {
+    box-shadow: var(--shadow-header);
+    transform: translateY(-5px);
+}
+
+.carusel>a {
+    text-decoration: none;
+}
+
+.carusel .card img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.carusel .card .content {
+    padding: 0.5rem;
+    color: black;
+
+}
+
+.carusel .card .content h3 {
+    margin: 0;
+}
+
+.carusel .card:hover .content h3 {
+    color: var(--primary);
+}
+
+/* @media only screen and (max-width: 540px) {
+    .carusel .hide-small {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .carusel .hide-medium {
+        display: none;
+    }
+} */
