@@ -23,11 +23,12 @@ header {
 }
 
 header .top {
+    z-index: 100;
     top: 1rem;
     position: fixed;
     width: calc(100vw - 4 * 1rem);
-    max-width: calc(60rem - 2 * 1rem);
-    margin: 0 1rem;
+    max-width: calc(60rem - 0 * 1rem);
+    margin: 0 -1rem;
     box-sizing: border-box;
     height: 3rem;
     display: flex;
@@ -137,6 +138,8 @@ footer {
     display: grid;
     gap: 4rem;
     padding: 2rem 1rem;
+    margin: 0 -1rem;
+    width: calc(100% + 2rem);
     background-color: white;
     grid-template-columns: 7rem 20rem;
     box-shadow: var(--shadow);
@@ -177,6 +180,22 @@ footer .navs {
 footer .navs h3 {
     font-size: large;
     margin-top: 0;
+}
+
+.big-card {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    background-color: white;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    overflow: hidden;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.big-card h3 {
+    margin: 0;
 }
 
 .carusel {
@@ -230,6 +249,27 @@ footer .navs h3 {
 
 .carusel .card:hover .content h3 {
     color: var(--primary);
+}
+
+
+.all-pets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.all-pets a {
+    background-color: var(--primary);
+    border-radius: var(--radius);
+    text-decoration: none;
+    min-width: min(50%, 20rem);
+    display: block;
+    width: min-content;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+    color: black;
+    text-align: center;
 }
 
 /* @media only screen and (max-width: 540px) {
