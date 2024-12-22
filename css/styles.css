@@ -102,13 +102,23 @@ header .top .search button:hover {
 }
 
 header .hero {
-    margin-top: 4rem;
-    background-image: url(/img/hero-cat-small.webp);
-    background-size: cover;
-    height: 10rem;
     border-radius: var(--radius);
     padding: 1rem;
     color: white;
+    background-size: cover;
+}
+
+header .hero.main {
+    margin-top: 4rem;
+    background-image: url(/img/hero-cat-small.webp);
+    height: 10rem;
+
+}
+
+header .hero.pets {
+    margin-top: 4rem;
+    background-image: url(/img/hero-cat-small.webp);
+    height: 2rem;
 }
 
 header .hero h1 {
@@ -121,7 +131,13 @@ header .hero p {
 }
 
 @media only screen and (min-width: 600px) {
-    header .hero {
+    header .hero.pets {
+        background-image: url(/img/hero-cat-large.webp);
+        height: 5rem;
+        padding: 2rem 5rem;
+    }
+
+    header .hero.main {
         background-image: url(/img/hero-cat-large.webp);
         height: 20rem;
         padding: 5rem;
@@ -287,7 +303,7 @@ footer .navs h3 {
     width: 100%;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     overflow: hidden;
     display: grid;
     grid-template-columns: auto 30rem;
