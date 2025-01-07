@@ -16,6 +16,7 @@ body {
     font-family: sans-serif;
     font-size: large;
     max-width: calc(min(60rem, 100vw) - 2rem);
+    width: 100%;
     display: grid;
     grid-template-areas:
         "header"
@@ -372,7 +373,8 @@ footer .navs h3 {
 }
 
 .about .split aside {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -380,11 +382,30 @@ footer .navs h3 {
 
 .about .split aside img {
     aspect-ratio: 1;
-    width: 100%;
     object-fit: cover;
     border-radius: var(--radius);
+    width: 100%;
 }
 
 section {
     margin-bottom: 4rem;
+}
+
+.pet-info {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.pet-info .split-pet {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 30rem auto;
+    gap: 2rem;
+}
+
+.pet-info .split-pet aside img {
+    aspect-ratio: 1;
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 15rem;
 }
