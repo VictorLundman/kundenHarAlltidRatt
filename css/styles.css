@@ -16,10 +16,21 @@ body {
     font-family: sans-serif;
     font-size: large;
     max-width: calc(min(60rem, 100vw) - 2rem);
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
+    ;
 }
 
 header {
     width: 100%;
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
 }
 
 header .top {
@@ -149,6 +160,7 @@ h2 {
 }
 
 footer {
+    grid-area: footer;
     border-radius: var(--radius);
     display: grid;
     gap: 4rem;
@@ -228,7 +240,7 @@ footer .navs h3 {
     width: 100%;
 }
 
-.carusel .card {
+.card {
     height: min-content;
     background-color: white;
     box-shadow: var(--shadow);
@@ -238,7 +250,7 @@ footer .navs h3 {
     transition: 0.1s ease-in-out;
 }
 
-.carusel .card:hover {
+.card:hover {
     box-shadow: var(--shadow-header);
     transform: translateY(-5px);
 }
@@ -247,23 +259,45 @@ footer .navs h3 {
     text-decoration: none;
 }
 
-.carusel .card img {
+.card img {
     width: 100%;
     aspect-ratio: 1;
 }
 
-.carusel .card .content {
+.card .content {
     padding: 0.5rem;
     color: black;
 
 }
 
-.carusel .card .content h3 {
+.card .content h3 {
     margin: 0;
 }
 
-.carusel .card:hover .content h3 {
+.card:hover .content h3 {
     color: var(--primary);
+}
+
+.veterinarians-cards {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.veterinarians-cards a {
+    color: black;
+    text-decoration: none;
+    width: 18rem;
+}
+
+.veterinarians-cards .content span:last-child {
+    margin-top: 0.5rem;
+}
+
+.veterinarians-cards .content span {
+    display: block;
 }
 
 
