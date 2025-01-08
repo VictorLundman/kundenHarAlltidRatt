@@ -51,10 +51,16 @@ header .top {
     box-shadow: var(--shadow-header);
 }
 
+header .top .logo img {
+    height: 2.5rem;
+}
+
 header .top .logo a {
     width: 5rem;
     font-size: large;
     font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 header .top nav {
