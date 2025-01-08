@@ -347,12 +347,12 @@ footer .navs h3 {
     margin-bottom: 2rem;
     overflow: hidden;
     display: grid;
-    grid-template-columns: auto 30rem;
+    grid-template-columns: auto 20rem;
     height: 15rem;
 }
 
 .founder-card.left {
-    grid-template-columns: 30rem auto;
+    grid-template-columns: 20rem auto;
 }
 
 .founder-card img {
