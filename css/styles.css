@@ -299,6 +299,10 @@ footer .navs h3 {
     width: 18rem;
 }
 
+.veterinary {
+    height: 25rem;
+}
+
 .veterinarians-cards .content span:last-child {
     margin-top: 0.5rem;
 }
